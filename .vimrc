@@ -82,3 +82,4 @@ set number
 nnoremap u :undo<CR>
 nnoremap U :redo<CR>
 
+filetype indent on
