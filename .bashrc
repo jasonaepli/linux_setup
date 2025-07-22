@@ -124,3 +124,25 @@ eval "$(pyenv virtualenv-init -)"
 
 #My aliases
 alias matlab="/usr/local/MATLAB/R2024b/bin/matlab"
+alias cursor="/opt/Cursor-1.2.1-x86_64.AppImage --no-sandbox"
+alias la="ls -lart"
+
+# Enable tab completion
+source ~/.terminal-config/git-completion.bash
+
+# Change command prompt
+source ~/.terminal-config/git-prompt.sh
+
+# colors
+red="\[\033[38;5;203m\]"
+green="\[\033[38;05;38m\]"
+blue="\[\033[0;34m\]"
+reset="\[\033[0m\]"
+
+export GIT_PS1_SHOWDIRTYSTATE=1
+
+# '\u' adds the name of the current user to the prompt
+# '\$(__git_ps1)' adds git related stuff
+# '\W' adds the name of the current directory
+export PS1="$red\u$green\$(__git_ps1)$blue \W
+$ $reset"
